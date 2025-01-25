@@ -16,7 +16,7 @@ const Dashboard = ({ selectedDelitos, onClose }) => {
 
                 const promises = selectedDelitos.map(async (delito) => {
                     const fileName = `${delito}.json`; // Nombre del archivo directamente
-                    const jsonData = await import(`./../assets/delitos/${fileName}`);
+                    const jsonData = await import(`/assets/delitos/${fileName}`);
                     return { delito, data: jsonData.default };
                 });
 
